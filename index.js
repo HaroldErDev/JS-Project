@@ -1,4 +1,5 @@
 const cells = document.querySelectorAll('.cell');
+const restart = document.querySelector('button');
 
 const winCombinations = [
     [0,1,2],
@@ -22,6 +23,8 @@ for(let i=0; i<cells.length; i++) {
     });
 }
 
+/* find() => per ogni elemento in winCombinations trova il primo elemento che soddisfa una certa condizione */
+/* filter() => per ogni elemento in item prende gli elementi che soddisfano una certa condizione */
 function checkWinner() {
     winCombinations.find((item) => {
         if(item.filter((i) => player1.includes(i)).length === 3) {
@@ -31,3 +34,10 @@ function checkWinner() {
         return;
     });
 }
+
+restart.addEventListener('click', () => {
+    for(let i=0; i<cells.length; i++) {
+        cells[i].innerHTML = '';
+    }
+    player1.length = 0;
+});
