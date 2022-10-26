@@ -3,8 +3,33 @@ body {
     background-color: rgb(43, 43, 69);
 }
 
+.title {
+    text-align: center;
+    color: rgb(182, 72, 8);
+    font-size: 100px;
+    font-family: monospace;
+    margin-left: 40px;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+                 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
 .container {
-    margin: 230px 750px;
+    margin-top: 150px;
+    margin-left: 750px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: monospace;
+    font-size: 25px;
+    margin-bottom: 30px;
+    width: 465px;
+}
+
+.counter .player2 {
+    margin-left: 190px;
 }
 
 .game-field {
@@ -25,6 +50,7 @@ body {
     height: 150px;
     width: 150px;
     border: 2px solid black;
+    background-color: rgb(15, 15, 125);
 }
 
 .restart-button {
@@ -33,7 +59,7 @@ body {
 }
 
 .restart-button button {
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(15, 15, 125);
     cursor: pointer;
     font-size: 30px;
     padding: 10px 15px;
@@ -43,6 +69,6 @@ body {
 }
 
 .restart-button button:hover {
-    background-color: rgb(255, 94, 0);
+    background-color: rgb(182, 72, 8);
     transform: scale(1.05);
 }
