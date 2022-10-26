@@ -18,7 +18,7 @@ body {
     margin-left: 750px;
 }
 
-.counter {
+.score {
     display: flex;
     flex-direction: row;
     color: white;
@@ -28,7 +28,7 @@ body {
     width: 465px;
 }
 
-.counter .player2 {
+.score .player2 {
     margin-left: 190px;
 }
 
@@ -51,6 +51,7 @@ body {
     width: 150px;
     border: 2px solid black;
     background-color: rgb(15, 15, 125);
+    user-select: none;
 }
 
 .restart-button {

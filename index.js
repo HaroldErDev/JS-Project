@@ -26,7 +26,9 @@ let turn = true;
 
 for(let i=0; i<cells.length; i++) {
     cells[i].addEventListener('click', () => {
-        if(turn == true) {
+        if(cells[i].innerHTML !== '') {
+            return;
+        } else if(turn == true) {
             cells[i].innerHTML = 'X';
             player1.push(i);
             turn = false;
@@ -71,8 +73,8 @@ function cleanField() {
     for(let i=0; i<cells.length; i++) {
         cells[i].innerHTML = '';
     }
-    player1.length = 0;
-    player2.length = 0;
+    player1.length = 0; //Svuota l'array di player1
+    player2.length = 0; //Svuota l'array di player2
     turn = true;
 }
 
