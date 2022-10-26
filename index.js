@@ -46,17 +46,21 @@ for(let i=0; i<cells.length; i++) {
 function checkWinner() {
     winCombinations.find((item) => {
         if(item.filter((i) => player1.includes(i)).length === 3) {
-            alert('Player1 Vince!');
-            score.player1++;
-            drewScore();
-            cleanField();
-            return item;
+            setTimeout(() => {
+                alert('Player1 Won!');
+                score.player1++;
+                drewScore();
+                cleanField();
+                return item;
+            }, 10);
         } else if(item.filter((i) => player2.includes(i)).length === 3) {
-            alert('Player2 Vince!');
-            score.player2++;
-            drewScore();
-            cleanField();
-            return item;
+            setTimeout(() => {
+                alert('Player2 Won!');
+                score.player2++;
+                drewScore();
+                cleanField();
+                return item;
+            }, 10);
         }
         return;
     });
