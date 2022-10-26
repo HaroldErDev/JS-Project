@@ -15,10 +15,19 @@ const winCombinations = [
 let player1 = [];
 let player2 = [];
 
+let turn = true;
+
 for(let i=0; i<cells.length; i++) {
     cells[i].addEventListener('click', () => {
-        cells[i].innerHTML = 'X';
-        player1.push(i);
+        if(turn == true) {
+            cells[i].innerHTML = 'X';
+            player1.push(i);
+            turn = false;
+        } else {
+            cells[i].innerHTML = 'O';
+            player2.push(i);
+            turn = true;
+        }
         checkWinner();
     });
 }
@@ -30,6 +39,9 @@ function checkWinner() {
         if(item.filter((i) => player1.includes(i)).length === 3) {
             alert('Player1 Vince!');
             return item;
+        } else if(item.filter((i) => player2.includes(i)).length === 3) {
+            alert('Player2 Vince!');
+            return item;
         }
         return;
     });
@@ -40,4 +52,5 @@ restart.addEventListener('click', () => {
         cells[i].innerHTML = '';
     }
     player1.length = 0;
+    player2.length = 0;
 });
