@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: rgb(43, 43, 69);
+}
+
+.container {
+    margin: 230px 750px;
+}
+
+.game-field {
+    display: flex;
+    align-items: flex-start;
+    width: 462px;
+    border: 2px solid black;
+}
+
+.cells {
+    color: white;
+    text-align: center;
+    font-size: 125px;
+    font-family: monospace;
+}
+
+.cell {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
